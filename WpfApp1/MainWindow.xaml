@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <!--定義-->
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+
+        <!-- 左邊選單-->
+        <Border Grid.Row="0" Grid.Column="0" Background="LightGray"/>
+        <Border Grid.Row="0" Grid.Column="1" Background="White"/>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="1" Grid.Row="1">
+            <TextBox AcceptsReturn="True" TextWrapping="Wrap" BorderThickness="0"  Padding="5,0,0,0" x:Name="TextArea" Background="Gray" Cursor="Pen" Foreground="White" CaretBrush="White"></TextBox>
+        </ScrollViewer>
+
+
+        <StackPanel Margin="10">
+            <Button Margin="0,0,0,10" x:Name="NewBtn" Click="NewBtn_Click">New</Button>
+            <Button Margin="0,0,0,10" x:Name="OpenBtn" Click="OpenBtn_Click">Open</Button>
+            <Button Margin="0,0,0,10" x:Name="SaveBtn" Click="SaveBtn_Click">Save</Button>
+            <Button Margin="0,0,0,10" x:Name="SaveasBtn" Click="SaveasBtn_Click">Save as</Button>
+
+            <StackPanel Orientation="Horizontal" Height="40" Margin="0,10,5,0">
+                <Button Margin="10 0 5 0" FontSize="12" Foreground="Black"  Background="LightGray" BorderThickness="0" x:Name="frontSize12" Click="frontSize12_Click" Height="24" VerticalAlignment="Bottom" Width="30">A</Button>
+                <Button Margin="10 0 5 0" FontSize="18" Foreground="Black"  Background="LightGray" BorderThickness="0" x:Name="frontSize18" Click="frontSize18_Click" Height="28" VerticalAlignment="Bottom" Width="30">A</Button>
+                <Button Margin="10 0 5 0" FontSize="24" Foreground="Black"  Background="LightGray" BorderThickness="0" x:Name="frontSize24" Click="frontSize24_Click" Height="32" VerticalAlignment="Bottom" Width="22">A</Button>
+
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>
